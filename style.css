@@ -1,12 +1,14 @@
 .popis-hry h1,
-.pravidla-soupis h1 {
+.pravidla-soupis h1,
+.hra h1 {
   font-family: 'Lobster', cursive;
   font-size: 2em;
   margin: 0;
   padding-bottom: 20px;
 }
 
-.pravidla-soupis h1 {
+.pravidla-soupis h1,
+.hra h1 {
   text-align: center;
   padding-top: 30px;
 }
@@ -46,6 +48,11 @@ body {
 
 .pravidla-cislovane li {
   padding-bottom: 5px;
+}
+
+.hra__hrac {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* tlacitka - pro obě strany*/
@@ -97,6 +104,40 @@ a:hover.modre {
   background-color: #0090e9;
 }
 
+/* tlacitka - strana se hrou */
+.hra--zelene {
+  background-color: #1fcca4;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.hra--modre {
+  background-color: #0197f6;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.hra--zelene:focus,
+.hra--zelene:hover {
+  background-color: #1cbb96;
+}
+
+.hra--modre:focus,
+.hra--modre:hover {
+  background-color: #0090e9;
+}
+
+.hra--zelene img {
+  max-width: 100%;
+}
+
+.hra__navigace {
+  display: inline;
+}
+
 .uvod img {
   display: block;
   border-radius: 5px 5px 0 0;
@@ -116,10 +157,40 @@ a:hover.modre {
   margin-bottom: 0;
 }
 
+.hra--uvod {
+  display: flex;
+  align-items: baseline;
+}
+
+.hra__hrac {
+  flex-basis: 50%;
+}
+
+.hra__navigace {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hra--filter,
 .pravidla--filter {
   filter: invert(100%);
   width: 1em;
   height: 1em;
+}
+
+.hra--policko {
+  display: block;
+  flex: 1 1 10%;
+  padding: 3vmin;
+  border-radius: 0%;
+  border: 1px solid #0d1117;
+  background-color: #ccbcda;
+}
+
+.hra--policko:focus,
+.hra--policko:hover {
+  background-color: #c1b4d7;
 }
 
 .uvod {
@@ -129,6 +200,17 @@ a:hover.modre {
 .pravidla {
   max-width: 80vw;
   margin-top: 50px;
+}
+
+.hra {
+  max-width: 80vmin;
+}
+
+.hra__pole {
+  min-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 640px) {
