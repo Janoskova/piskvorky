@@ -188,6 +188,25 @@ a:hover.modre {
   background-color: #ccbcda;
 }
 
+.board__field--circle {
+  background: url(obrazky/circle.svg) center no-repeat #ccbcda;
+  animation: createPicture 0.15s;
+}
+
+.board__field--cross {
+  background: url(obrazky/cross.svg) center no-repeat #ccbcda;
+  animation: createPicture 0.15s;
+}
+
+@keyframes createPicture {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .hra--policko:focus,
 .hra--policko:hover {
   background-color: #c1b4d7;
