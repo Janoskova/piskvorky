@@ -28,7 +28,7 @@ body {
 .popis-hry {
   background-color: #283e50;
   text-align: center;
-  padding: 30px 10px 30px 10px;
+  padding: 10px;
 }
 
 .popis-hry p {
@@ -55,7 +55,7 @@ body {
   text-transform: uppercase;
 }
 
-/* tlacitka - pro obě strany*/
+/* tlacitka - pro úvodní stranu a stranu s pravidly*/
 .zelene {
   background-color: #1fcca4;
   padding-top: 10px;
@@ -190,22 +190,36 @@ a:hover.modre {
 
 .board__field--circle {
   background: url(obrazky/circle.svg) center no-repeat #ccbcda;
-  animation: createPicture 0.15s;
+  /* animation: createPicture 0.15s; */
+  background-size: 80%;
+  animation: scale 0.15s linear;
 }
 
 .board__field--cross {
   background: url(obrazky/cross.svg) center no-repeat #ccbcda;
-  animation: createPicture 0.15s;
+  /* animation: createPicture 0.15s;*/
+  background-size: 80%;
+  animation: scale 0.15s linear;
 }
 
-@keyframes createPicture {
+/* lepší řešení než createPicture */
+@keyframes scale {
+  from {
+    background-size: 0%;
+  }
+  to {
+    background-size: 80%;
+  }
+}
+
+/* @keyframes createPicture {
   from {
     transform: scale(0);
   }
   to {
     transform: scale(1);
   }
-}
+} */
 
 .hra--policko:focus,
 .hra--policko:hover {
@@ -253,7 +267,7 @@ a:hover.modre {
   }
 
   .pravidla {
-    max-width: 50vw;
+    max-width: 80vw;
     margin-top: 50px;
   }
 }
